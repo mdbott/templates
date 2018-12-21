@@ -1,0 +1,14 @@
+parameter_defaults:
+  OvercloudControllerFlavor: baremetal
+  OvercloudOSPServicesFlavor: baremetal
+  OvercloudComputeFlavor: baremetal
+  ControllerCount: 3
+  OSPServicesCount: 3
+  ComputeCount: 2
+  # Compute Flavor and Count should be specified via the command line to allow scaling.
+  OSPServicesSchedulerHints:
+    'capabilities:node': 'service-%index%'
+  ControllerSchedulerHints:
+    'capabilities:node': 'pacemaker-%index%'
+  ComputeSchedulerHints:
+    'capabilities:node': 'compute-%index%'

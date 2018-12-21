@@ -1,0 +1,5 @@
+parameter_defaults:
+  # NOTE: These example parameters are required when using CephExternal
+  CephClusterFSID: 'aaa9c2a3-afd8-4a59-87b4-b97c0462aa35'
+  CephClientKey: 'AQD/C8NZ16ziERAAtYl59IkK3ABdHtFuNTEE6A=='
+  CephExternalMonHost: '172.22.0.17,172.22.0.18,172.22.0.19'

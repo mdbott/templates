@@ -1,0 +1,6 @@
+
+parameter_defaults:
+  NeutronExternalNetworkBridge: "''"
+  NeutronNetworkType: 'vxlan'
+  NeutronTunnelTypes: 'vxlan'
+

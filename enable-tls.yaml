@@ -1,0 +1,66 @@
+parameter_defaults:
+  SSLCertificate: |
+    -----BEGIN CERTIFICATE-----
+    MIIDsjCCApoCAQEwDQYJKoZIhvcNAQELBQAwgZ4xCzAJBgNVBAYTAkFVMQwwCgYD
+    VQQIDANBQ1QxETAPBgNVBAcMCENhbmJlcnJhMQwwCgYDVQQKDANPUkcxFDASBgNV
+    BAsMC0NhbmJlcnJhTGFiMRMwEQYDVQQDDApDbG91ZEFkbWluMTUwMwYJKoZIhvcN
+    AQkBFiZVdGlsaXR5Q2xvdWRBZG1pbl9ETy1OT1QtUkVQTFlAY2JyLmxhYjAeFw0x
+    ODA3MjUwNzIzNDVaFw0xOTA3MjUwNzIzNDVaMIGeMQswCQYDVQQGEwJBVTEMMAoG
+    A1UECAwDQUNUMREwDwYDVQQHDAhDYW5iZXJyYTEMMAoGA1UECgwDT1JHMRQwEgYD
+    VQQLDAtDYW5iZXJyYUxhYjETMBEGA1UEAwwKMTAuMC4wLjEwMDE1MDMGCSqGSIb3
+    DQEJARYmVXRpbGl0eUNsb3VkQWRtaW5fRE8tTk9ULVJFUExZQGNici5sYWIwggEi
+    MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDJB7qr5t8c5t4qczM3bdaHO8k1
+    T9tKC75UxyHTlxlyKnZACo2pRCOkXuUzyR+pdGvbe3oQGPjm79tqMgTKP0ddY59C
+    IhBtOH2yzkN6Gw20Nm76j1wIx9D8YpLZ7Xo4Qh+/IZ4sObyLjRa7TtMf6JyK3MTe
+    l1rbp3qKF8iYy7coU+3yntoyjXeBlf7ZhIiBdLxehp0BFud85J8JKygw3ycLERMg
+    XzzozrNBeQSyeaB7H07GReV3qcIoIywffj1GFze+ve3cfi3U5hey4EZHT7p6QoeD
+    LnBZmhR4171q9y9AwaQrVPnSaa96N6V9w2S2uTnirGbEpbs4fN04oQiJ3IoNAgMB
+    AAEwDQYJKoZIhvcNAQELBQADggEBANLJ0Um+GDLmTH/8ehk0SlL6MBurI/dtXYZC
+    KOeyp1KC6sV1i+PDwg8DCRmuj/kt3gkr/X1f8Co403M1M8MY1scmX11A6iwUyEhL
+    ofXMULoKSsAmEVbulsF7u+d0g+fT17g+drfq0LXHh5d5ajVliRPIoger09GNrabO
+    MdrOI2f+luKjcSVIoaiZQjdf6SEoOIDPlZB2RjOtMG+BDEBQ6BOaPtkypDAjG3dH
+    HdE4eCGTN/adRi/6eZpeHNYPJiV8GM1Jpo20me8pPv16aXewEt3kGG8ucaHOop9L
+    Jjn8Z9L7OxQuMa5pyNd4ZpM7zAiZVvGzuw+RTRiNKdUKfFYKeMo=
+    -----END CERTIFICATE-----
+  SSLIntermediateCertificate: ''
+  SSLKey: |
+    -----BEGIN RSA PRIVATE KEY-----
+    MIIEpQIBAAKCAQEAyQe6q+bfHObeKnMzN23WhzvJNU/bSgu+VMch05cZcip2QAqN
+    qUQjpF7lM8kfqXRr23t6EBj45u/bajIEyj9HXWOfQiIQbTh9ss5DehsNtDZu+o9c
+    CMfQ/GKS2e16OEIfvyGeLDm8i40Wu07TH+icitzE3pda26d6ihfImMu3KFPt8p7a
+    Mo13gZX+2YSIgXS8XoadARbnfOSfCSsoMN8nCxETIF886M6zQXkEsnmgex9OxkXl
+    d6nCKCMsH349Rhc3vr3t3H4t1OYXsuBGR0+6ekKHgy5wWZoUeNe9avcvQMGkK1T5
+    0mmvejelfcNktrk54qxmxKW7OHzdOKEIidyKDQIDAQABAoIBAQDDybdQvKYHrAIs
+    Lc5v6ZXKV7v7JC9ayl0wjFCxlrO9sQVCEgUuGaLs708jRHqFu1Fgjb2v9+JSaMC1
+    iMmJgF+s4N22tx5wgVhK0QB+5+JM5cboWL81/gXYCNklTlh+ekgZClDWmdS7xUmi
+    W37b0NzFkYZbk+V1kIOUAt3nkmBr8Lfo+2iPZ7PIxHEmFwncaq8Zce2X0oep6Kdx
+    tervTd0GQYe0M329LS7i0BR2bvBtuCuIJsqA3LiHoM0fiado5e7Ko2dC7K0K5fUo
+    J2aD+2Cy0UIgEURTBANfuZlPf2JumWeoHgL4Wuh4PXOy5wqBJEB88yITicfFJvvE
+    ftPjwngBAoGBAOp/wmw0nKT6aV36UDpGMiOaG/MjBp4iAD79kJF8WhJaV0N925wg
+    hKsvT6hrReOK0bAS/yVOWfWVIozlRiiFR71mSSrYFZcSnPqoiVk6ahbKayR05h77
+    +b/ZWhRjyyteeuUMOpEXM6hJkWmxKL9S5/ShyGLXKzsUIkSXLqGXVHiBAoGBANt2
+    YJIT4vr8pCA6YGiHQRMYckWXR+j7d2OMnfy8BlrcyTh8VbRy1PLYjgzKW2KY5d0z
+    9wWQtnQUOXGVWU+CRN3b0woghC7lwszdTeYngUVcUCPCqF3MSlRylRAh+ilWLCdx
+    mzDcE2t2gmjYzUnc+uVXySWjuph3uAsuOxmX2KuNAoGALGTJcuC28wixH+h+fbnC
+    Tjkjp3DvFMrNDx/D2bcX+jd+I7nU9Ia3dwz64KCGV6B1OAcwpGhj4Xk9VD0nfg5V
+    WYbevSyxUatlapKzhd/oK65ggENdOWpsiqRkSE3oLaqyS2B4SfWBgw+CZubyFt5k
+    KUzjecrQVVvnbOLOIitbA4ECgYEAjG4jPVYcWB5xp22zYy+pJF7wQDedfCftLXY9
+    YguuxVWiLNLixKT2Pq7ztpuF/oF4FSO7XYRMO9r1Jwk6LPZeuth/ImvMKXY8QHsb
+    7bo5rfh0D23v7pVaus7XM4uKWAkcF+FKPOmWQ52BtTWFp04P/dE+lSc/r3BsBDuA
+    9c+EhcECgYEApY7Y3EALHgUR7e1/96g1hA54yt+EOjTv6eEkIEV81yq3AJndxpea
+    sFhr1S7DQMSyTr9HVHMBqgD8bEykUH76MKDJrakV0y5NWCtjjqL6O5Sb11yvj+eB
+    agsnkOUFgX94Z4ZArxHNWqnqLBiKHcPo0NIT2uc4CIH7VOYLEG3Vc+Q=
+    -----END RSA PRIVATE KEY-----
+  # Static parameters - these are values that must be
+  # included in the environment but should not be changed.
+  # ******************************************************
+  # The filepath of the certificate as it will be stored in the controller.
+  # Type: string
+  DeployedSSLCertificatePath: /etc/pki/tls/private/overcloud_endpoint.pem
+
+  # *********************
+  # End static parameters
+  # *********************
+
+resource_registry:
+  OS::TripleO::NodeTLSData: /usr/share/openstack-tripleo-heat-templates/puppet/extraconfig/tls/tls-cert-inject.yaml

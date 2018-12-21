@@ -1,0 +1,7 @@
+parameter_defaults:
+  ControllerExtraConfig:
+    tripleo::firewall::firewall_rules:
+      '127 horizon':
+        dport: [80,443]
+        proto: tcp
+        action: accept

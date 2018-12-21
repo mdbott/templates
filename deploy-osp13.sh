@@ -1,0 +1,19 @@
+openstack overcloud deploy --templates /usr/share/openstack-tripleo-heat-templates \
+  -n /home/stack/templates/network_data.yaml \
+  -r /home/stack/templates/roles_data.yaml \
+  -e /usr/share/openstack-tripleo-heat-templates/environments/network-isolation.yaml \
+  -e /usr/share/openstack-tripleo-heat-templates/environments/neutron-ovs-dvr.yaml \
+  -e /home/stack/templates/network-environment.yaml \
+  -e /home/stack/overcloud_images.yaml \
+  -e /home/stack/templates/inject-trust-anchor-hiera.yaml \
+  -e /home/stack/templates/hostnames_ips_osp13.yaml \
+  -e /home/stack/templates/scheduler_hints.yaml \
+  -e /usr/share/openstack-tripleo-heat-templates/environments/ceph-ansible/ceph-ansible-external.yaml \
+  -e /home/stack/templates/ceph-external.yaml \
+  -e /home/stack/templates/ipa-ldap-config.yaml \
+  -e /home/stack/templates/docker-puppet.yaml \
+  -e /home/stack/templates/horizon_firewall.yaml \
+  -e /home/stack/templates/enable-tls.yaml \
+  -e /home/stack/templates/tls-endpoints-public-ip.yaml \
+  --ntp-server 10.76.23.25 --libvirt-type kvm  \
+  --log-file overcloud_deployment_0.log

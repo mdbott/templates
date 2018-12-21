@@ -1,0 +1,48 @@
+resource_registry:
+  OS::TripleO::Compute::Net::SoftwareConfig: /home/stack/templates/nics/compute.yaml
+  OS::TripleO::Controller::Net::SoftwareConfig: /home/stack/templates/nics/controller.yaml
+  OS::TripleO::OSPServices::Net::SoftwareConfig: /home/stack/templates/nics/ospservices.yaml
+
+  OS::TripleO::Controller::Ports::InternalApiPort: /usr/share/openstack-tripleo-heat-templates/network/ports/internal_api_from_pool.yaml
+  OS::TripleO::Controller::Ports::StoragePort: /usr/share/openstack-tripleo-heat-templates/network/ports/storage_from_pool.yaml
+  OS::TripleO::Controller::Ports::ExternalPort: /usr/share/openstack-tripleo-heat-templates/network/ports/external_from_pool.yaml
+
+  OS::TripleO::OSPServices::Ports::ExternalPort: /usr/share/openstack-tripleo-heat-templates/network/ports/external_from_pool.yaml
+  OS::TripleO::OSPServices::Ports::InternalApiPort: /usr/share/openstack-tripleo-heat-templates/network/ports/internal_api_from_pool.yaml
+  OS::TripleO::OSPServices::Ports::StoragePort: /usr/share/openstack-tripleo-heat-templates/network/ports/storage_from_pool.yaml
+  OS::TripleO::OSPServices::Ports::TenantPort: /usr/share/openstack-tripleo-heat-templates/network/ports/tenant_from_pool.yaml
+
+  OS::TripleO::Compute::Ports::ExternalPort: /usr/share/openstack-tripleo-heat-templates/network/ports/external_from_pool.yaml
+  OS::TripleO::Compute::Ports::InternalApiPort: /usr/share/openstack-tripleo-heat-templates/network/ports/internal_api_from_pool.yaml
+  OS::TripleO::Compute::Ports::StoragePort: /usr/share/openstack-tripleo-heat-templates/network/ports/storage_from_pool.yaml
+  OS::TripleO::Compute::Ports::TenantPort: /usr/share/openstack-tripleo-heat-templates/network/ports/tenant_from_pool.yaml
+
+
+
+parameter_defaults:
+  NeutronExternalNetworkBridge: "''"
+  NeutronNetworkType: 'vxlan'
+  NeutronTunnelTypes: 'vxlan'
+  NeutronEnableARPResponder: True
+
+  InternalApiNetCidr: 172.21.0.0/24
+  TenantNetCidr: 172.16.0.0/24
+  StorageNetCidr: 172.22.0.0/24
+  ExternalNetCidr: 10.0.0.0/24
+
+  InternalApiAllocationPools: [{'start': '172.21.0.100', 'end': '172.21.0.200'}]
+  TenantAllocationPools: [{'start': '172.16.0.100', 'end': '172.16.0.200'}]
+  StorageAllocationPools: [{'start': '172.22.0.100', 'end': '172.22.0.200'}]
+  ExternalAllocationPools: [{'start': '10.0.0.100', 'end': '10.0.0.200'}]
+
+  # Virtual IPs for the cloud
+
+  PublicVirtualFixedIPs: [{'ip_address':'10.0.0.100'}]
+  InternalApiVirtualFixedIPs: [{'ip_address':'172.21.0.100'}]
+  RedisVirtualFixedIPs: [{'ip_address':'172.21.0.99'}]
+  StorageVirtualFixedIPs: [{'ip_address':'172.22.0.100'}]
+
+  ExternalInterfaceDefaultRoute: 10.0.0.1
+  ControlPlaneDefaultRoute: 192.0.2.1
+  EC2MetadataIp: 192.0.2.1
+  DnsServers: ["10.76.23.25"]

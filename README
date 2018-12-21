@@ -1,0 +1,57 @@
+# Deploying a new OSP13 Cloud using os-inception
+These templates can be used to build or rebuild a OSP13 dev cloud using os-inception.
+
+## Clone the repo onto the undercloud
+
+- login to the undercloud
+- clone this repo into /home/stack/templates
+- cp the deploy script deploy-osp13.sh into the stack home directory.
+- Update the "undercloud-ca" entry in the file
+  /home/stack/templates/inject-trust-anchor-hiera.yaml with the
+  contents of the undercloud ca with is located at
+  /etc/pki/ca-trust/source/anchors/cm-local-ca.pem. This will allow the overcloud
+  nodes to trust the undercloud.
+- ensure the ipa credentials are correct in
+  /home/stack/templates/ipa-ldap-config.yaml
+- load the undercloud creds with
+  . stackrc
+- deploy the overcloud with
+  ./deploy-osp13.sh
+
+
+## To regenerate the overcloud certs 
+su - stack
+mkdir ~/SSL
+cd ~/SSL
+```
+Generate a private key for the CA
+```bash
+openssl genrsa -out overcloud-ca-privkey.pem 2048
+```
+
+Generate a self-signed CA certificate
+```bash
+openssl req -new -x509 -key overcloud-ca-privkey.pem -out overcloud-cacert.pem -config openssl-ca.cnf
+```
+Add the self-signed CA certificate to the undercloud’s trusted certificate store.
+```bash
+sudo cp overcloud-cacert.pem /etc/pki/ca-trust/source/anchors/
+sudo update-ca-trust extract
+```
+
+Generate the leaf certificate request and key that will be used for the public VIP.
+```bash
+openssl req -sha256 -nodes -newkey rsa:2048 -keyout server-key.pem -out server-req.pem -config openssl.cnf
+```
+Process the server RSA key
+```bash
+openssl rsa -in server-key.pem -out server-key.pem
+```
+Sign the leaf certificate with the CA certificate and generate the certificate.
+```bash
+openssl x509 -req -in server-req.pem -days 365 \
+      -CA overcloud-cacert.pem -CAkey overcloud-ca-privkey.pem \
+      -set_serial 01 -out server-cert.pem
+```
+Based on the documentation at
+https://docs.openstack.org/tripleo-docs/latest/install/advanced_deployment/ssl.html#certificate-details
